@@ -1,0 +1,61 @@
+/* Shape Up 4 - home page styles */
+
+/* the document */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    font-weight: bold;
+}
+h1 {
+    font-size: 150%;
+}
+
+/* the header */
+header img {
+    float: left;
+    margin-right: 2em;
+}
+header h2 {
+    font-size: 250%;
+    color: steelblue;
+    font-style: italic;
+}
+header h3 {
+    font-size: 150%;
+}
+main {
+    clear: left;
+}
+
+/* the section */
+section a:link,
+section a:visited {
+    color: maroon;
+}
+section a:hover,
+section a:focus {
+    color: steelblue;
+}
+
+/* the aside */
+aside h2 {
+    color: maroon;
+}
+aside li {
+    line-height: 1.5;
+}
+aside a:link,
+aside a:visited {
+    color: steelblue;
+}
+aside a:hover,
+aside a:focus {
+    color: maroon;
+}
+
+/* the footer */
+footer {
+    font-size: 80%;
+    text-align: center;
+}
