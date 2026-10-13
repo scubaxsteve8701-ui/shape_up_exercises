@@ -1,0 +1,168 @@
+/* Shape Up 6 - fluid 3-column home page styles */
+
+/* the reset selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* the document */
+html {
+    background-color: white;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(14px, 0.8rem + 0.4vw, 18px);   /* sized relative to the viewport */
+    width: 100%;                                     /* fluid: full width, no border */
+    background-color: white;
+}
+a {
+    font-weight: bold;
+}
+h1 {
+    font-size: clamp(1.3rem, 1rem + 1vw, 1.8rem);
+    margin-bottom: .25em;
+}
+p {
+    margin-bottom: .5em;
+}
+
+/* the header */
+header {
+    padding: 1.5em 0 1.5em 4%;
+    border-bottom: 3px solid steelblue;
+    background-image: linear-gradient(to bottom, white 0%, lightsteelblue 100%);
+}
+header img {
+    float: left;
+    margin-right: 2em;
+    width: 12%;              /* scalable image */
+    max-width: 120px;
+    min-width: 100px;
+    height: auto;            /* keeps the aspect ratio */
+}
+header h2 {
+    font-size: clamp(2rem, 1.2rem + 3vw, 3.25rem);
+    color: steelblue;
+    font-style: italic;
+}
+header h3 {
+    font-size: clamp(1.1rem, 0.8rem + 1.2vw, 1.6rem);
+}
+
+/* the main element: 3-column flexbox layout */
+main {
+    clear: left;
+    display: flex;
+    gap: 3%;
+    padding: 1.5em 3% 2em 3%;
+}
+
+/* the section (middle column) */
+section {
+    flex: 1;                 /* takes the remaining width */
+    order: 2;
+}
+section h2 {
+    font-size: clamp(1.15rem, 0.9rem + 0.8vw, 1.5rem);
+    margin-top: 1em;
+}
+section h3 {
+    font-size: clamp(1rem, 0.85rem + 0.5vw, 1.25rem);
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+blockquote {
+    padding: 0 1.5em;
+}
+section a:link,
+section a:visited {
+    color: maroon;
+}
+section a:hover,
+section a:focus {
+    color: steelblue;
+}
+
+/* the asides (left and right columns) */
+aside {
+    flex: 0 0 26%;           /* fluid 26% columns */
+    align-self: flex-start;  /* box only as tall as its content */
+    padding: .5em 1.5em 1em 1.5em;
+    border: 2px solid steelblue;
+    border-radius: 25px;
+}
+aside h2 {
+    font-size: clamp(1.15rem, 0.9rem + 0.8vw, 1.5rem);
+    color: maroon;
+    margin-bottom: .25em;
+}
+aside ul {
+    margin-left: 1em;
+}
+aside li {
+    line-height: 1.5;
+}
+aside a:link,
+aside a:visited {
+    color: steelblue;
+}
+aside a:hover,
+aside a:focus {
+    color: maroon;
+}
+aside.resources {
+    order: 1;                /* first column */
+}
+aside.prepare {
+    order: 3;                /* third column */
+}
+aside.prepare h3 {
+    font-size: clamp(0.95rem, 0.85rem + 0.3vw, 1.1rem);
+    margin: .75em 0 .4em 0;
+}
+aside.prepare p {
+    font-size: 90%;
+}
+
+/* the footer */
+footer {
+    background-color: steelblue;
+    padding: 1em 0;
+}
+footer p {
+    font-size: 80%;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+/* medium screens: section on top, the two asides side by side below it */
+@media (max-width: 1023px) {
+    main {
+        flex-wrap: wrap;
+        row-gap: 1.5em;
+    }
+    section {
+        flex: 1 1 100%;
+        order: 1;
+    }
+    aside {
+        flex: 1 1 45%;
+    }
+    aside.resources {
+        order: 2;
+    }
+}
+
+/* narrow screens: stack everything in one column */
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+    aside {
+        flex: none;
+        align-self: stretch;
+    }
+}
