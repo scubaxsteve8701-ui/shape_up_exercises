@@ -1,0 +1,193 @@
+/* Shape Up 7 - home page with 2-tier navigation menu */
+
+/* the reset selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* the document */
+html {
+    background-color: white;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(14px, 0.8rem + 0.4vw, 18px);   /* sized relative to the viewport */
+    width: 100%;                                     /* fluid: full width, no border */
+    background-color: white;
+}
+a {
+    font-weight: bold;
+}
+h1 {
+    font-size: clamp(1.3rem, 1rem + 1vw, 1.8rem);
+    margin-bottom: .25em;
+}
+p {
+    margin-bottom: .5em;
+}
+
+/* the header */
+header {
+    padding: 1.5em 0 1.5em 4%;
+    border-bottom: 3px solid steelblue;
+    background-image: linear-gradient(to bottom, white 0%, lightsteelblue 100%);
+}
+header img {
+    float: left;
+    margin-right: 2em;
+    width: 12%;              /* scalable image */
+    max-width: 120px;
+    min-width: 100px;
+    height: auto;            /* keeps the aspect ratio */
+}
+header h2 {
+    font-size: clamp(2rem, 1.2rem + 3vw, 3.25rem);
+    color: steelblue;
+    font-style: italic;
+}
+header h3 {
+    font-size: clamp(1.1rem, 0.8rem + 1.2vw, 1.6rem);
+}
+
+/* the navigation menu */
+#nav_menu {
+    background-color: steelblue;
+}
+#nav_menu ul {
+    list-style: none;
+}
+#nav_menu > ul {
+    display: flex;
+    flex-wrap: wrap;          /* wraps on small screens */
+    padding: 0 3%;
+}
+#nav_menu li {
+    position: relative;       /* anchor for the submenu */
+}
+#nav_menu a {
+    display: block;
+    padding: .7em 1.2em;
+    color: white;
+    text-decoration: none;
+    font-size: 90%;
+}
+#nav_menu a:hover,
+#nav_menu a:focus {
+    text-decoration: underline;
+    background-color: #4a7ba6;
+}
+#nav_menu a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: -3px;
+}
+#nav_menu a.current {
+    margin: .3em 0;
+    padding: .4em 1.2em;
+    border: 2px solid white;  /* rounded white border on current page */
+    border-radius: 8px;
+}
+/* add an arrow to items that have a submenu */
+#nav_menu li:has(ul) > a::after {
+    content: " \25BE";
+}
+
+/* the submenus */
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 12em;
+    background-color: steelblue;
+    z-index: 10;
+}
+#nav_menu li:hover > ul,
+#nav_menu li:focus-within > ul {
+    display: block;           /* show on hover or keyboard focus */
+}
+
+/* the main element: 2-column flexbox layout */
+main {
+    clear: left;
+    display: flex;
+    gap: 4%;
+    padding: 1.5em 4% 2em 4%;
+}
+
+/* the section (left column) */
+section {
+    flex: 1;                 /* takes the remaining width */
+}
+section h2 {
+    font-size: clamp(1.15rem, 0.9rem + 0.8vw, 1.5rem);
+    margin-top: 1em;
+}
+section h3 {
+    font-size: clamp(1rem, 0.85rem + 0.5vw, 1.25rem);
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+blockquote {
+    padding: 0 1.5em;
+}
+section a:link,
+section a:visited {
+    color: maroon;
+}
+section a:hover,
+section a:focus {
+    color: steelblue;
+}
+
+/* the aside (right column) */
+aside {
+    flex: 0 0 30%;           /* fluid 30% column */
+    align-self: flex-start;  /* box only as tall as its content */
+    padding: .5em 1.5em 1em 1.5em;
+    border: 2px solid steelblue;
+    border-radius: 25px;
+}
+aside h2 {
+    font-size: clamp(1.15rem, 0.9rem + 0.8vw, 1.5rem);
+    color: maroon;
+    margin-bottom: .25em;
+}
+aside ul {
+    margin-left: 1em;
+}
+aside li {
+    line-height: 1.5;
+}
+aside a:link,
+aside a:visited {
+    color: steelblue;
+}
+aside a:hover,
+aside a:focus {
+    color: maroon;
+}
+
+/* the footer */
+footer {
+    background-color: steelblue;
+    padding: 1em 0;
+}
+footer p {
+    font-size: 80%;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+/* narrow screens: stack the columns */
+@media (max-width: 767px) {
+    main {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    aside {
+        align-self: stretch;
+    }
+}
