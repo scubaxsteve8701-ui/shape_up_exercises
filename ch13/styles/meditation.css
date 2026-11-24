@@ -1,0 +1,24 @@
+/* Shape Up 13 - small adjustments for the Meditation page
+   (most styles come from main.css) */
+
+/* space between the headings and the media below them */
+section h2 {
+    margin-bottom: .5em;
+}
+
+/* the video fills the width of the section and scales on small screens */
+video {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    background-color: black;
+}
+
+/* each audio player on its own line, with space between them */
+audio {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    margin-bottom: 1.25em;
+}

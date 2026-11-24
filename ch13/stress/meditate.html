@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about meditation, watch a meditation video, and choose your meditation music.">
+    <title>Shape Up! | Meditation</title>
+    <link rel="icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/meditation.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../images/shape_up_logo.png" alt="Shape Up logo - go to the home page"></a>
+        <h2>Shape Up!</h2>
+        <h3>Find the best fit for you</h3>
+    </header>
+
+    <nav id="nav_menu">
+        <!-- dropdown menu button for small screens -->
+        <input type="checkbox" id="menu_toggle" aria-label="Show or hide the menu">
+        <label for="menu_toggle" id="menu_button">
+            <span class="open_icon" aria-hidden="true">&#9776;</span>
+            <span class="close_icon" aria-hidden="true">&#10005;</span>
+        </label>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../strength/strength.html">Strength Training</a></li>
+            <li><a href="../cardio/cardio.html">Cardio Exercises</a></li>
+            <li><a href="stress.html" class="current">Stress Relief</a>
+                <ul>
+                    <li><a href="stress.html">What is Stress?</a></li>
+                    <li><a href="tips.html">5 Helpful Tips</a></li>
+                    <li><a href="meditate.html" aria-current="page">Meditation</a></li>
+                    <li><a href="vipassana.html">Vipassana</a></li>
+                </ul>
+            </li>
+            <li><a href="../diet/diet.html">Healthy Diets</a>
+                <ul>
+                    <li><a href="../diet/diet.html">Why a Healthy Diet?</a></li>
+                    <li><a href="../diet/meals.html">Plan Your Meals</a></li>
+                    <li><a href="../diet/calories.html">Count Your Calories</a></li>
+                    <li><a href="../diet/bmi.html">Calculate Your BMI</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>What is Meditation?</h1>
+            <p>Meditation is one path toward transforming the mind. Buddhist meditation
+                practices encourage and develop concentration, clarity, and emotional
+                positivity. When you begin a meditation practice, you may learn the patterns
+                and habits of your mind. Meditation offers you a way to cultivate new and more
+                positive ways to approach the things you do throughout your day. Meditation
+                can have a transformative effect and can lead to positive changes as well as a
+                new understanding of life.</p>
+
+            <h2>Video of a woman meditating</h2>
+            <video src="../media/meditation.mp4" controls preload="metadata">
+                <p>Your browser doesn't support HTML video.
+                    <a href="../media/meditation.mp4">Download the video</a> instead.</p>
+            </video>
+
+            <h2>Choose your meditation music</h2>
+            <!-- CHANGE these file names to match the .mp3 files in your media folder -->
+            <audio src="../media/music1.mp3" controls preload="metadata">
+                Your browser doesn't support HTML audio.
+            </audio>
+            <audio src="../media/music2.mp3" controls preload="metadata">
+                Your browser doesn't support HTML audio.
+            </audio>
+            <audio src="../media/music3.mp3" controls preload="metadata">
+                Your browser doesn't support HTML audio.
+            </audio>
+            <audio src="../media/music4.mp3" controls preload="metadata">
+                Your browser doesn't support HTML audio.
+            </audio>
+        </section>
+
+        <aside>
+            <h2>Additional resources</h2>
+            <ul>
+                <li class="run"><a href="https://www.cdc.gov/physical-activity-basics/benefits/index.html">Physical activity and health</a></li>
+                <li class="stretch"><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/flexibility-exercise-stretching">Stretching exercises</a></li>
+                <li class="strength"><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/strength-and-resistance-training-exercise">Strength training</a></li>
+                <li class="cardio"><a href="https://www.health.harvard.edu/exercise-and-fitness/interval-training-for-a-stronger-heart">Cardiovascular training</a></li>
+                <li class="yoga"><a href="https://www.self.com/gallery/power-yoga-workout">Yoga workout</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; Shape Up!</p>
+    </footer>
+</body>
+</html>
